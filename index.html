@@ -478,15 +478,20 @@
         border: 1.5px solid rgba(255, 100, 140, 0.4);
         position: relative;
         overflow: hidden;
-        cursor: none;
+        cursor: default;
       }
       .falling-heart {
         position: absolute;
-        font-size: 28px;
+        font-size: 32px;
         cursor: pointer;
         user-select: none;
         animation: fallDown linear forwards;
         z-index: 2;
+        /* Hit area diperbesar biar lebih gampang dicepet */
+        padding: 14px;
+        margin: -14px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
       }
       @keyframes fallDown {
         0% {
@@ -1436,11 +1441,13 @@
             Math.floor(Math.random() * 5)
           ];
           const x = Math.random() * (canvas.offsetWidth - 40);
-          const duration = 1.5 + Math.random() * 1.5;
-          heart.style.cssText = `left:${x}px; animation-duration:${duration}s; font-size:${22 + Math.random() * 14}px`;
-          heart.addEventListener("click", (e) => {
+          const duration = 3 + Math.random() * 2;
+          heart.style.cssText = `left:${x}px; animation-duration:${duration}s; font-size:${26 + Math.random() * 14}px`;
+
+          function catchHeart(e) {
             if (!gameRunning) return;
             e.stopPropagation();
+            e.preventDefault();
             score++;
             document.getElementById("score-display").textContent = score;
             const pop = document.createElement("div");
@@ -1451,7 +1458,10 @@
             setTimeout(() => pop.remove(), 500);
             heart.remove();
             if (score >= TARGET) endGame(true);
-          });
+          }
+
+          heart.addEventListener("click", catchHeart);
+          heart.addEventListener("touchstart", catchHeart, { passive: false });
           canvas.appendChild(heart);
           setTimeout(() => heart.remove(), duration * 1000 + 200);
           spawnTimer = setTimeout(spawnHeart, 180 + Math.random() * 200);
