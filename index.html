@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buat Kamu 💌</title>
+    <title>Buat Sayangkuuu 💌</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -534,16 +534,23 @@
         margin-bottom: 20px;
       }
       .avatar-circle {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
-        border: 3px solid rgba(255, 255, 255, 0.3);
-        background: rgba(150, 150, 180, 0.4);
+        border: 3px solid rgba(255, 150, 180, 0.5);
+        background: rgba(60, 20, 80, 0.4);
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 32px;
         overflow: hidden;
+        box-shadow: 0 0 14px rgba(255, 100, 160, 0.3);
+      }
+      .avatar-circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
       }
       .lose-text {
         color: white;
@@ -1164,8 +1171,18 @@
       <div class="heart-bg" id="lose-hearts-bg"></div>
       <div class="card" style="position: relative; z-index: 2">
         <div class="couple-avatars">
-          <div class="avatar-circle">🐼</div>
-          <div class="avatar-circle">🐻</div>
+          <div class="avatar-circle">
+            <img
+              src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGJwaGZ6YmI3eXc1MzJwMm53NWNoZ28zaHp6eGk0aWFpenE3dmZjMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KztT2c4u8mYYUiMKdJ/giphy.gif"
+              alt="avatar1"
+            />
+          </div>
+          <div class="avatar-circle">
+            <img
+              src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTh6amV4ZWwwdHY3NzNsbXVta2EyY3F3cnFybWU0MmZ0b3B4MjBqaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qFmdpUKAFZ6rMobzzu/giphy.gif"
+              alt="avatar2"
+            />
+          </div>
         </div>
         <div class="lose-text">
           <h3 id="lose-h3"></h3>
@@ -1251,8 +1268,18 @@
         "
       >
         <div class="couple-avatars">
-          <div class="avatar-circle">🐼</div>
-          <div class="avatar-circle">🐻</div>
+          <div class="avatar-circle">
+            <img
+              src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGJwaGZ6YmI3eXc1MzJwMm53NWNoZ28zaHp6eGk0aWFpenE3dmZjMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KztT2c4u8mYYUiMKdJ/giphy.gif"
+              alt="avatar1"
+            />
+          </div>
+          <div class="avatar-circle">
+            <img
+              src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTh6amV4ZWwwdHY3NzNsbXVta2EyY3F3cnFybWU0MmZ0b3B4MjBqaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qFmdpUKAFZ6rMobzzu/giphy.gif"
+              alt="avatar2"
+            />
+          </div>
         </div>
         <div id="letter-content-area" class="letter-content"></div>
       </div>
@@ -1400,7 +1427,7 @@
         const subEl = document.getElementById("screen1-sub");
         const btn = document.getElementById("btn-buka");
 
-        typeInto(titleEl, "Ada surat buat kamu! 💌", 38, () => {
+        typeInto(titleEl, "Ada surat buat Sayangkuuu! 💌", 38, () => {
           typeInto(subEl, "Klik buka untuk membaca ya 🥰", 32, () => {
             btn.style.opacity = "1";
           });
@@ -1413,7 +1440,7 @@
         setTimeout(() => {
           goTo("screen-letter", () => {
             const p = document.getElementById("letter2-text");
-            typeInto(p, "Alooo\nKamuu! ✨", 55, () => {
+            typeInto(p, "Alooo\nSayangkuuu! ✨", 55, () => {
               setTimeout(() => goTo("screen-game", initScreen3), 1400);
             });
           });
@@ -1429,7 +1456,7 @@
         subEl.innerHTML = "";
         btn.style.opacity = "0";
 
-        typeInto(titleEl, "Mini Game buat Kamu 👊", 35, () => {
+        typeInto(titleEl, "Mini Game buat Sayangkuuu 👊", 35, () => {
           typeInto(subEl, "Tangkap 50 hati sebelum waktu abis! 🥏", 28, () => {
             btn.style.opacity = "1";
           });
@@ -1541,7 +1568,7 @@
 
         typeInto(h3, "Yaahh Waktunya Abis! 😤🤤 — ◡.' ", 30, () => {
           p1.innerHTML =
-            "Karena kamu gagal nangkep <strong>50 hati</strong>,<br>Maka kamu wajib <strong>kirim pap</strong> ke aku sebanyak <strong>3 foto</strong> 🤪";
+            "Karena Sayangkuuu gagal nangkep <strong>50 hati</strong>,<br>Maka Sayangkuuu wajib <strong>kirim pap</strong> ke aku sebanyak <strong>3 foto</strong> 🤪";
           setTimeout(() => {
             typeInto(div, "—— =ᵖ᷃ɔ", 40, () => {
               typeInto(p2, "Hehehe 🏃", 40, () => {
@@ -1611,7 +1638,7 @@
 
         // Go back to screen 1
         goTo("screen-envelope", () => {
-          typeInto(titleEl, "Ada surat buat kamu! 💌", 38, () => {
+          typeInto(titleEl, "Ada surat buat Sayangkuuu! 💌", 38, () => {
             typeInto(subEl, "Klik buka untuk membaca ya 🥰", 32, () => {
               btnBuka.style.opacity = "1";
             });
@@ -1743,23 +1770,23 @@
 
       // ===== SCREEN 7: LOVE LETTER =====
       const LETTER_SEGMENTS = [
-        { cls: "h2-para", text: "Happy Valentine's Day! 🥰" },
+        { cls: "h2-para", text: "Congratulation Sayangkuu! 🥰" },
         {
           cls: "",
-          text: "Kita rayakan hari kasih sayang ini yaa 🥰 Semoga cinta kita selalu tumbuh dan setiap langkah dimudahkan dalam hubungan kita serta kebahagiaan selalu menyertai kita berdua 🥹💕",
+          text: "Aku cuma mau Sayangkuuu tahu satu hal… aku akan selalu ada buat Sayangkuuu, dalam kondisi apa pun. Mau lagi bahagia, sedih, capek, atau bahkan di titik terendah sekalipun, aku nggak akan pergi. 🥹💕",
         },
         {
           cls: "",
-          text: "Semoga di hari Valentine ini, kita makin dekat, makin saling mengerti, dan makin percaya satu sama lain. Apa pun yang kita impikan bersama, pelan-pelan semoga satu per satu bisa terwujud dengan cara terbaik yaww 🎀",
+          text: "Aku ingin kita tetap jalan bareng, menghadapi semuanya berdua. Karena buat aku, Sayangkuuu bukan cuma seseorang yang aku sayang, tapi juga rumah yang selalu ingin aku pulangin. 🎀",
         },
         {
           cls: "",
-          text: "Semangat terus buat jalani harinya, jangan pernah takut gagal yaa, aku selalu dukung kamu dan sayang kamu di sini selamanyaaa 🥹🌙",
+          text: "Aku sayang dan cinta Sayangkuuu, lebih dari yang bisa aku jelaskan dengan kata-kata. Dan aku benar-benar ingin kita terus seperti ini… saling jaga, saling kuatkan, sampai nanti kita menua bersama. Apa pun yang terjadi, aku tetap memilih Sayangkuuu. Selalu Sayangkuuu. 🥹🌙",
         },
         { cls: "divider-para", text: "—— =ᵖ᷃ɔ" },
         {
           cls: "sig-para",
-          text: "Terakhir,\nHappy Love Day 💝 And ...\nHappy Beautiful Valentine's Day ✨\nMy Everything 🩷",
+          text: "Terakhir,\nUntuk Sayangkuuu, seseorang yang selalu aku pilih di setiap keadaan.\nTerima kasih sudah tetap ada, sudah bertahan, dan sudah jadi bagian terindah dalam hidup aku. ✨\nAku nggak janji semuanya akan selalu mudah, tapi aku janji akan selalu ada, tetap di sini, dan terus berjuang bareng Sayangkuuu… sampai nanti kita menua bersama.\nMy everything, always you 🤍🩷",
         },
       ];
 
